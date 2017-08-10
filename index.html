@@ -38,63 +38,152 @@
 					</p>
 				</section>
 				<section>
-					<h2>HTML</h2>
+					<h2>CSS</h2>
 					    <ul>
-					        <p>El <strong>HTML (Hypertext Markup Language)</strong> es el lenguaje de marcas (<em>tags</em>) estándar para la creación de páginas y aplicaciones en la Web.</p>
-					        <p>Junto con <strong>CSS (Cascading Style Sheets)</strong> y <strong>JavaScript</strong>, conforma el grupo de las tres tecnologías principales de la Web.</p>
-					        <p>Fue creado en 1990 por el físico inglés <strong>Tim Berners-Lee</strong>. La <strong>primera página web</strong> está aún disponible en <a href="http://info.cern.ch/">http://info.cern.ch/</a></p>
+					        <p><strong>CSS (Cascading Style Sheets)</strong> es un lenguaje de diseño gráfico para describir la <strong>presentación</strong> de un documento escrito en un lenguaje de marcas (ej. HTML).</p>
+					        <p>Permite describir aspectos de diseño como <strong>colores, tipos y tamaños de letra, márgenes, alineamientos y muchos otros.</strong></p>
 					    </ul>
 				</section>
 				<section>
-					<h2>HTML</h2>
+					<h2>CSS</h2>
 					    <ul>
-					        <p>El HTML especifica la <strong>estructura</strong> y la <strong>semántica</strong> de una página web.</p>
-					        <p>La <strong>presentación</strong> es especificada mediante <strong>CSS</strong> y la <strong>interactividad</strong> mediante <strong>JavaScript</strong>.</p>
-					        <p>Tanto HTML como CSS son estándares del <a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a>.</p>
+					        <p><strong>Permite manejar la presentación separadamente del contenido</strong>, lo que brinda una mayor una flexibilidad en el diseño.</p>
+					        <p>Por ejemplo, <strong>varios archivos HTML pueden compartir una misma presentación</strong> al hacer referencia a un mismo archivo CSS.</p>
+					        <p>También posibilita un despliegue diferenciado de acuerdo a los tipos y tamaños de pantallas.</p>
 					    </ul>
 				</section>
 				<section>
-					<h2>HTML5</h2>
+					<h2>Historia de CSS</h2>
 					    <ul>
-					        <p>Su primera <a href="https://html.spec.whatwg.org/multipage/">especificación</a> fue publicada por el W3C en <strong>2014</strong>.</p>
-					        <p><strong>Reduce la necesidad de complementos externos</strong> (ej. Flash) para el manejo de multimedia y otros recursos. Para esto, se apoya en CSS, JavaScript y en el <a href="https://en.wikipedia.org/wiki/Document_Object_Model">Document Object Model (DOM)</a>.</p>
-					        <p>Se diseñó para funcionar en <strong>diferentes tipos de dipositivos</strong> (ej. computadoras, tabletas, teléfonos).</p>
+					        <p>Fue propuesto por <strong>Håkon Wium</strong> Lie, quien trabajaba en CERN con Tim Berners-Lee, en 1994.</p>
+					        <p>Al igual que HTML, <strong>CSS es un estándar de W3C</strong>. En la actualidad, <strong>la versión más utilizada es la 3 (CSS3)</strong>.</p>
 					    </ul>
 				</section>
 				<section>
-					<h2>El Document Object Model</h2>
+					<h2>Sintaxis de CSS</h2>
 					    <ul>
-					        <p><figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/500px-DOM-model.svg.png" alt="Elemento HTML"><figcaption><small>El DOM. Fuente: Wikimedia</small></figcaption></figure></p>
+					        <p>Las propiedades de estilo se especifican mediante construcciones de la forma:</p>
+                            <p><figure><img src="http://en-support.files.wordpress.com/2011/09/css-selectors-lrg.png" alt="Selector CSS"><figcaption><small>Sintaxis de CSS. Fuente: wordpress.com</small></figcaption></figure></p>
+                            <p>Hay una lista de propiedades en <a href="https://www.w3schools.com/cssref/">CSS Reference</a></p>
 					    </ul>
 				</section>
 				<section>
-					<h2>Ejemplo de documento HTML</h2>
+					<h2>Ejemplos de sintaxis CSS</h2>
+					    <pre><code class="hljs" data-trim contenteditable>
+                        p {
+                            color:red;
+                            font-size:200%;
+                        }
+					    </code></pre>
+					    <pre><code class="hljs" data-trim contenteditable>
+                        h1 {
+                            color:blue;
+                            background-color:yellow;
+                        }
+					    </code></pre>
+					    <pre><code class="hljs" data-trim contenteditable>
+                        body {
+                            background-color:black;
+                            color:white;
+                            font-family:Arial;
+                            margin:0 4px 0 0;
+                            border:12px solid;
+                        }
+					    </code></pre>	
+				</section>				
+				<section>
+					<h2>¿En dónde especificar propiedades CSS?</h2>
+					    <p>Un navegador web busca propiedades CSS en:</p>
+					    <ol>
+					        <li>Elementos HTML (ej. <em>body, h1, table</em>, ...)</li>
+					        <li>La sección <em>head</em> de un documento HTML</li>
+					        <li>Archivos externos (.css)</li>
+					        <li>La configuración por defecto del navegador</li>
+					    </ol>
+				</section>
+				<section>
+					<h2>Propiedades CSS en elementos HTML</h2>
+					    <pre><code class="hljs" data-trim contenteditable>
+                            &lt;h1 style="color:blue"&gt;Encabezado estilizado&lt;/h1&gt;
+					    </code></pre>
+					    <h3>¡Esta forma no es recomendada!</h3>
 					    <ul>
+					        <p>No se cumple la separación entre contenido y estilo</p>					    
+					    </ul>
+				</section>
+				<section>
+					<h2>Propiedades CSS en la sección <em>head</em></h2>
+					    <pre><code class="hljs" data-trim contenteditable>
+                            &lt;head&gt;
+                                &lt;title&gt;Ejemplo de CSS especificado en la sección head&lt;/title&gt;
+                                &lt;style&gt;
+                                    h1 {
+                                        color:blue;
+                                    }
+                                &lt;/style&gt;
+                            &lt;/head&gt;
+					    </code></pre>
+				</section>				
+				<section>
+					<h2>Propiedades CSS en archivos externos (.css)</h2>
+					    <ul>
+					        <p>En la sección <em>head</em> del archivo HTML que va a usar los estilos, debe incluirse un elemento de tipo <em>link</em>:</p>
+					    </ul>
+					    <pre><code class="hljs" data-trim contenteditable>
+                            &lt;link rel="stylesheet" href="estilos.css"&gt;
+					    </code></pre>
+				</section>
+				<section>
+					<h2>Propiedades CSS en archivos externos (.css)</h2>
+					    <ul>
+					        <p>Contenido de <em>estilos.css</em>:</p>
 					        <pre><code class="hljs" data-trim contenteditable>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Título del documento HTML&lt;/title&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contenido del documento HTML
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
-&lt;/html&gt;
-					        </code></pre>
+                                p {
+                                    color:red;
+                                    font-size:200%;
+                                }
+                                
+                                h1 {
+                                    background-color:yellow;
+                                }            
+                                
+                                body {
+                                    background-color:black;
+                                    color:white;
+                                    margin:0 4px 0 0;
+                                    border:12px solid;
+                                }                                    
+					        </code></pre>					        
 					    </ul>
-				</section>								
+				</section>				
 				<section>
-					<h2>Elementos de HTML</h2>
+					<h2>Ejercicio</h2>
 					    <ul>
-					        <p>Son los componentes individuales de un documento HTML. <strong>Contienen tags, pero no son lo mismo</strong>.</p>
-					        <p>Están compuestos de un <strong>tag inicial</strong>, un <strong>tag final</strong> (el cual opcional) y <strong>contenido</strong>. El tag final puede tener <strong>atributos</strong> especificados en la forma <em>nombre=valor</em>.</p>
-					        <p><figure><img src="https://upload.wikimedia.org/wikipedia/en/8/88/HTML_element_structure.png" alt="Elemento HTML"><figcaption><small>Ejemplo de elemento HTML. Fuente: Wikimedia</small></figcaption></figure></p>
+					        <p>Construya un sitio web con información sobre la especie de aves "Jabirú" o "Galán sin ventura" (<em>Jabiru mycteria</em>). El sitio debe tener tres páginas:</p>
+					        <ul>
+					            <li><strong>index.html</strong>: con información general sobre la especie</a></li>
+					            <li><strong>distribucion.html</strong>: con un mapa de "My Google Maps" con los registros de presencia de la especie</li>		
+					            <li><strong>imagenes.html</strong>: con una lista de imágenes de la especie</li>						            			            
+					        </ul>
+					    </ul>
+				</section>			
+				<section>
+					<h2>Ejercicio</h2>
+					    <ul>
+					        <p>Fuentes de información:</p>
+					        <ul>
+					            <li><strong>Información general sobre la especie: </strong><a href="https://es.wikipedia.org/wiki/Jabiru_mycteria">Wikispecies</a></li>
+					            <li><strong>Registros de presencia de la especie: </strong>archivo proporcionado por el profesor</li>
+					            <li><strong>Imágenes: </strong><a href="https://demo.gbif.org/occurrence/gallery?q=jabiru%20m&country=CR&has_coordinate=true&has_geospatial_issue=false&taxon_key=2481953">GBIF y iNaturalist</a></li>
+					        </ul>
 					    </ul>
 				</section>
 				<section>
-					<h2>Documentación sobre los elementos de HTML</h2>
+					<h2>Ejercicio</h2>
 					    <ul>
-					        <p>Hay varias fuentes disponibles. Por ejemplo, <a href="https://www.w3schools.com/html/">el tutorial de W3Schools</a> y su <a href="https://www.w3schools.com/tags/default.asp">referencia</a>.</p>
+    			            <p>Cree un archivo llamado estilos.css que, para los tres archivos, especifique: el tipo y tamaño de letra, el color de fondo y el color de los encabezados.</p>
+    			            <p>En cada página, cree una barra de navegación que permita navegar a las otras dos páginas. Para esto utilice el elemento <a href="https://www.w3schools.com/tags/tag_nav.asp">nav</a>.</p>
+				            <p>Referencie las diferentes fuentes de información (textos, imágenes, etc.). Utilice los elementos <a href="https://www.w3schools.com/tags/tag_cite.asp">cite</a> y <a href="https://www.w3schools.com/tags/tag_figure.asp">figure</a>.</p>
 					    </ul>
 				</section>				
 			</div>
