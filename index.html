@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">		
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/journal.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -30,28 +30,28 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h2>Desarrollo de aplicaciones geoespaciales en la Web</h2>
-					<h3>Fundamentos de CSS</h3>
-					<p>
-						<small>Manuel Vargas (mvargas@inbio.ac.cr)</small>
-					</p>
+				<section id="css">
+					<h2>CSS</h2>
+					<br>
+					<small>Manuel Vargas (<a href="mailto:mfvargas@gmail.com">mfvargas@gmail.com</a>)</small>
+					<br>
+					<small>Agosto de 2019</small>
 				</section>
-				<section>
+				<section id="intro">
 					<h2>CSS</h2>
 					    <ul>
 					        <p><strong>CSS (Cascading Style Sheets)</strong> es un lenguaje de diseño gráfico para describir la <strong>presentación</strong> de un documento escrito en un lenguaje de marcas (ej. HTML).</p>
 					        <p>Permite describir aspectos de diseño como <strong>colores, tipos y tamaños de letra, márgenes, alineamientos y muchos otros.</strong></p>
 					    </ul>
 				</section>
-				<section>
+				<section id="usos">
 					<h2>CSS</h2>
 					    <ul>
 					        <p><strong>Permite manejar la presentación separadamente del contenido</strong>, lo que brinda una mayor una flexibilidad en el diseño.</p>
 					        <p>Por ejemplo, <strong>varios archivos HTML pueden compartir una misma presentación</strong> al hacer referencia a un mismo archivo CSS.</p>
 					        <p>También posibilita un despliegue diferenciado de acuerdo a los tipos y tamaños de pantallas.</p>
 					    </ul>
-				</section>
+				</section id="historia">
 				<section>
 					<h2>Historia de CSS</h2>
 					    <ul>
@@ -59,7 +59,7 @@
 					        <p>Al igual que HTML, <strong>CSS es un estándar de W3C</strong>. En la actualidad, <strong>la versión más utilizada es la 3 (CSS3)</strong>.</p>
 					    </ul>
 				</section>
-				<section>
+				<section id="sintaxis>
 					<h2>Sintaxis de CSS</h2>
 					    <ul>
 					        <p>Las propiedades de estilo se especifican mediante construcciones de la forma:</p>
@@ -67,7 +67,7 @@
                             <p>Hay una lista de propiedades en <a href="https://www.w3schools.com/cssref/">CSS Reference</a></p>
 					    </ul>
 				</section>
-				<section>
+				<section id="sintaxis-ejemplos">
 					<h2>Ejemplos de sintaxis CSS</h2>
 					    <pre><code class="hljs" data-trim contenteditable>
                         p {
@@ -91,7 +91,7 @@
                         }
 					    </code></pre>	
 				</section>				
-				<section>
+				<section id="propiedades">
 					<h2>¿En dónde especificar propiedades CSS?</h2>
 					    <p>Un navegador web busca propiedades CSS en:</p>
 					    <ol>
@@ -101,7 +101,7 @@
 					        <li>La configuración por defecto del navegador</li>
 					    </ol>
 				</section>
-				<section>
+				<section id="propiedades-elementos">
 					<h2>Propiedades CSS en elementos HTML</h2>
 					    <pre><code class="hljs" data-trim contenteditable>
                             &lt;h1 style="color:blue"&gt;Encabezado estilizado&lt;/h1&gt;
@@ -111,7 +111,7 @@
 					        <p>No se cumple la separación entre contenido y estilo</p>					    
 					    </ul>
 				</section>
-				<section>
+				<section id="propiedades-head">
 					<h2>Propiedades CSS en la sección <em>head</em></h2>
 					    <pre><code class="hljs" data-trim contenteditable>
                             &lt;head&gt;
@@ -124,7 +124,7 @@
                             &lt;/head&gt;
 					    </code></pre>
 				</section>				
-				<section>
+				<section id="propiedades-externos">
 					<h2>Propiedades CSS en archivos externos (.css)</h2>
 					    <ul>
 					        <p>En la sección <em>head</em> del archivo HTML que va a usar los estilos, debe incluirse un elemento de tipo <em>link</em>:</p>
@@ -133,7 +133,7 @@
                             &lt;link rel="stylesheet" href="estilos.css"&gt;
 					    </code></pre>
 				</section>
-				<section>
+				<section id="propiedades-externos-2">
 					<h2>Propiedades CSS en archivos externos (.css)</h2>
 					    <ul>
 					        <p>Contenido de <em>estilos.css</em>:</p>
@@ -156,7 +156,7 @@
 					        </code></pre>					        
 					    </ul>
 				</section>				
-				<section>
+				<section id="ejercicios-1">
 					<h2>Ejercicio</h2>
 					    <ul>
 					        <p>Construya un sitio web con información sobre la especie de aves "Jabirú" o "Galán sin ventura" (<em>Jabiru mycteria</em>). El sitio debe tener tres páginas:</p>
@@ -167,7 +167,7 @@
 					        </ul>
 					    </ul>
 				</section>			
-				<section>
+				<section id="ejercicios-2">
 					<h2>Ejercicio</h2>
 					    <ul>
 					        <p>Fuentes de información:</p>
@@ -178,7 +178,7 @@
 					        </ul>
 					    </ul>
 				</section>
-				<section>
+				<section id="ejercicios-3">
 					<h2>Ejercicio</h2>
 					    <ul>
     			            <p>Cree un archivo llamado estilos.css que, para los tres archivos, especifique: el tipo y tamaño de letra, el color de fondo y el color de los encabezados.</p>
@@ -197,6 +197,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        history: true,															
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
