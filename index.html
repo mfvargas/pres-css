@@ -187,7 +187,7 @@
 					<h2>¿Cómo especificar colores en CSS?</h2>
 					    <ul>
 					        <li>Colores predefinidos (ej. red, green, ghostwhite, darkslategrey) (puede ver una lista en <a href="http://colours.neilorangepeel.com/">http://colours.neilorangepeel.com/</a>).</li>
-					        <li>Notación hexadecimal (ej. #FF00FF).</li>
+					        <li>Notación hexadecimal (ej. #ff00ff).</li>
                             <li>La función rgb() [ej. rgb(255, 0, 255)]</li>
                             <li>La función rgba() [ej. rgba(255, 0, 255, 0.5)]</li>
 					    </ul>
@@ -213,6 +213,75 @@
                                     background-repeat:no-repeat;
                                     background-size:cover;
                                 }                             
+					        </code></pre>					        
+					    </ul>
+				</section>
+				<section id="border">
+					<h2>"Border" (borde)</h2>
+					    <ul>
+					        <p>Propiedades para el "border"</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                body {
+                                    border-width:5px;
+                                    border-style:solid;
+                                    border-color:gold;
+
+                                    border:5px solid gold;
+                                }                             
+					        </code></pre>					        
+					    </ul>
+				</section>	
+				<section id="selectores-elementos-1">
+					<h2>Selectores para elementos individuales</h2>
+					    <ul>
+					        <p>En HTML, se utiliza la propiedad "id":</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                              <p id="parrafo-especial">
+                                Texto del parrafo especial.
+                              </p>                          
+					        </code></pre>					        
+					    </ul>
+				</section>	
+				<section id="selectores-elementos-2">
+					<h2>Selectores para elementos individuales</h2>
+					    <ul>
+					        <p>En CSS, se utiliza el símbolo #:</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                #parrafo-especial {
+                                    background:yellow;
+                                }                           
+					        </code></pre>					        
+					    </ul>
+				</section>	
+				<section id="selectores-clases-1">
+					<h2>Selectores para grupos de elementos</h2>
+					    <ul>
+					        <p>En HTML, se utiliza la propiedad "class":</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                              <p class="verde">
+                                Texto de parrafo con fondo verde.
+                              </p>     
+                              <p class="verde">
+                                Otro parrafo con fondo verde.
+                              </p>      
+                              <p class="azul">
+                                Texto del parrafo con fondo azul.
+                              </p>               
+					        </code></pre>					        
+					    </ul>
+				</section>	
+				<section id="selectores-clases-2">
+					<h2>Selectores para grupos de elementos</h2>
+					    <ul>
+					        <p>En CSS, se utiliza el punto (.):</p>
+					        <pre><code class="hljs" data-trim contenteditable>
+                                .verde {
+                                    background:green;
+                                }            
+
+                                .azul {
+                                    background:blue;
+                                }                                          
 					        </code></pre>					        
 					    </ul>
 				</section>	
